@@ -5,7 +5,11 @@ interface ChakraConfig {
   useSystemColorMode: boolean;
 }
 
-const fonts = { mono: `'Menlo', monospace` };
+const fonts = {
+  mono: `'Menlo', monospace`,
+  roboto: `'Roboto', sans-serif`,
+  fireSans: `'Fira Sans', sans-serif`
+};
 
 const config: ChakraConfig = {
   initialColorMode: "light",
