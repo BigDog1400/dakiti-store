@@ -1,6 +1,6 @@
 import { Box, Text, VStack } from "@chakra-ui/layout";
 import React, { useEffect, useRef, useState } from "react";
-import { MenuSection } from "../../types/menu_section";
+import { MenuSection } from "../../models/menu_section";
 
 function NavBarItem({ categories, sectionTitle }: MenuSection) {
   const divRef = useRef<HTMLDivElement>(null);

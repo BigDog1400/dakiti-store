@@ -24,7 +24,7 @@ import {
   RiSkipBackFill
 } from "react-icons/ri";
 import { mockCategories } from "../../contansts/mockCagategories";
-import { MenuSection } from "../../types/menu_section";
+import { MenuSection } from "../../models/menu_section";
 
 type MenuItemsProps = {
   sections: MenuSection[];
