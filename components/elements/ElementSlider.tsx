@@ -5,7 +5,7 @@ import { scrollElementTo } from "../../utils/scrollElementTo";
 
 const CHAKRA_PIXEL_UNIT_BASE = 4;
 
-interface ElementSliderProps {
+export interface ElementSliderProps {
   children: ReactNode;
   elementWidth: number;
   spacing: StackProps["spacing"];
