@@ -15,7 +15,8 @@ function ItemForSale({
     <Stack
       overflow='hidden'
       boxShadow='sm'
-      w='200px'
+      width='240px'
+      minWidth='240px'
       _hover={{
         boxShadow: "md",
         cursor: "pointer"
