@@ -47,6 +47,7 @@ function NavBarItem({ categories, sectionTitle }: MenuSection) {
       onMouseEnter={toggleHoverState}
       color='gray.600'
       spacing='0'
+      zIndex='1'
       backgroundColor='white'
       onMouseLeave={toggleHoverState}
       _hover={{
