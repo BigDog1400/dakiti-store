@@ -1,9 +1,11 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, BoxProps } from "@chakra-ui/react";
 import React, { ReactElement } from "react";
 import { ReactNode } from "react";
 import { ElementSlider, ElementSliderProps } from "../elements/ElementSlider";
 
-interface SliderSectionItemsProps extends Omit<ElementSliderProps, "children"> {
+interface SliderSectionItemsProps
+  extends Omit<ElementSliderProps, "children">,
+    BoxProps {
   title: string;
   children: ReactNode;
 }
@@ -13,10 +15,11 @@ function SliderSectionItems({
   amountOfItemInScreen,
   elementWidth,
   children,
-  title
+  title,
+  ...restProps
 }: SliderSectionItemsProps) {
   return (
-    <Box maxW='container.xl' marginX='auto'>
+    <Box {...restProps} maxW='container.xl' marginX='auto'>
       <Heading fontFamily='fireSans' color='gray.600' fontWeight='300'>
         {title}
       </Heading>
