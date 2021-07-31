@@ -1,14 +1,13 @@
 import { SearchIcon } from "@chakra-ui/icons";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/input";
 import { HStack, Spacer, Text, VStack } from "@chakra-ui/layout";
-import { useMediaQuery } from "@chakra-ui/media-query";
 import React from "react";
 import { NavbarHeader } from "../modules/NavbarHeader";
 import { NavBarMenuNavigation } from "./NavBarMenuNavigation";
 
 function Header() {
   return (
-    <VStack paddingTop='0.5rem' backgroundColor='#f7f8fa' w='100%' spacing='0'>
+    <VStack paddingTop='0.5rem' bg={"gray.50"} w='100%' spacing='0'>
       <HStack
         paddingLeft='1rem'
         paddingRight='1rem'
