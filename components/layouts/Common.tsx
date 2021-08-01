@@ -1,5 +1,5 @@
 import { Box, Container } from "@chakra-ui/layout";
-import { ContainerProps } from "@chakra-ui/react";
+import { ContainerProps, Spacer, Stack } from "@chakra-ui/react";
 import React from "react";
 import { Header } from "../elements/Header";
 import Footer from "../modules/Footer";
@@ -11,13 +11,14 @@ type CommonLayoutProps = {
 
 function CommonLayout({ maxW = "container.xl", children }: CommonLayoutProps) {
   return (
-    <Box>
+    <Stack minH='100vh'>
       <Header />
       <Container as='main' maxW={maxW}>
         {children}
       </Container>
+      <Spacer />
       <Footer />
-    </Box>
+    </Stack>
   );
 }
 
