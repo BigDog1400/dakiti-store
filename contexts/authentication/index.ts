@@ -5,4 +5,4 @@ export const UserContext = createContext<{
   user: firebase.User | null | undefined;
   username: string | null | undefined;
   loading: boolean;
-}>({ user: null, username: null, loading: false });
+}>({ user: undefined, username: undefined, loading: false });

@@ -57,10 +57,9 @@ function UsernameForm() {
 
   const obSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Submit button clicked");
     // Create a reference for both the username and the user document
     const usernameDoc = firestore.doc(`usernames/${formValue}`);
-    const userDoc = firestore.doc(`users/${formValue}`);
+    const userDoc = firestore.doc(`users/${user?.uid}`);
 
     // Commit both docs together as a batch write
     const bath = await firestore.batch();

@@ -4,6 +4,7 @@ import { CommonLayout } from "../components/layouts/Common";
 import AuthenticationBox from "../components/modules/AuthenticationBox";
 import { UsernameForm } from "../components/modules/UsernameForm";
 import useAuth from "../hooks/useAuth";
+import withoutAuth from "../components/hocs/withoutAuth";
 
 function Authentication() {
   const { user, username, loading } = useAuth();
@@ -28,4 +29,4 @@ function Authentication() {
   );
 }
 
-export default Authentication;
+export default withoutAuth(Authentication);

@@ -13,6 +13,7 @@ function useUserData() {
     if (user) {
       const ref = firestore.collection("users").doc(user.uid);
       unsubscribe = ref.onSnapshot((doc) => {
+        console.log("user data snapshot", doc.data());
         setUsername(doc.data()?.username);
       });
     } else {
