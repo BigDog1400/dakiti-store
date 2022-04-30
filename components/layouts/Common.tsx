@@ -11,9 +11,9 @@ type CommonLayoutProps = {
 
 function CommonLayout({ maxW = "container.xl", children }: CommonLayoutProps) {
   return (
-    <Stack minH='100vh'>
+    <Stack minH="100vh">
       <Header />
-      <Container as='main' maxW={maxW}>
+      <Container as="main" maxW={maxW}>
         {children}
       </Container>
       <Spacer />
