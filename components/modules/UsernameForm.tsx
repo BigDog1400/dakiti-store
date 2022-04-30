@@ -8,7 +8,7 @@ import {
   Heading,
   Input,
   Stack,
-  VStack
+  VStack,
 } from "@chakra-ui/react";
 import React, { useCallback, useEffect, useState } from "react";
 import { firestore } from "../../lib/firebase";
@@ -66,30 +66,30 @@ function UsernameForm() {
     bath.set(userDoc, {
       username: formValue,
       photoUrl: user?.photoURL,
-      displayName: user?.displayName
+      displayName: user?.displayName,
     });
     bath.set(usernameDoc, {
-      uid: user?.uid
+      uid: user?.uid,
     });
     await bath.commit();
   };
   return (
     <VStack minH={"50vh"} justify={"center"}>
-      <Stack borderRadius='2xl' padding={10} boxShadow='xs'>
+      <Stack borderRadius="2xl" padding={10} boxShadow="xs">
         <Stack align={"center"}>
-          <Heading fontFamily='fireSans' fontSize={"3xl"}>
+          <Heading fontFamily="fireSans" fontSize={"3xl"}>
             Elije tu nombre de usuario
           </Heading>
         </Stack>
         <Box rounded={"lg"} bg={"white"} p={8}>
           <form onSubmit={obSubmit}>
             <Stack spacing={4}>
-              <FormControl isInvalid={!isValid} id='email'>
-                <FormLabel fontFamily='fireSans'>Nombre de usuario</FormLabel>
+              <FormControl isInvalid={!isValid} id="email">
+                <FormLabel fontFamily="fireSans">Nombre de usuario</FormLabel>
                 <Input
                   value={formValue}
-                  type='text'
-                  placeholder='Nombre de usuario'
+                  type="text"
+                  placeholder="Nombre de usuario"
                   onChange={onChange}
                 />
                 {!isValid && (
@@ -106,10 +106,10 @@ function UsernameForm() {
                 )}
               </FormControl>
               <Button
-                fontFamily='fireSans'
+                fontFamily="fireSans"
                 isLoading={isLoading}
-                fontWeight='light'
-                type='submit'
+                fontWeight="light"
+                type="submit"
               >
                 Crear
               </Button>
